@@ -1,7 +1,9 @@
 $color: #fafafa;
 $grey: #999;
 $lightGrey: #e3e3e3;
+$e_color: crimson;
 $bgColor: blue;
+
 @mixin flex($a, $b) {
   display: flex;
   align-items: $a;

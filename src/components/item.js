@@ -1,29 +1,29 @@
-import React, { useState, useEffect, useCallback, useContext } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import context from '../context';
 
-const Item = ({ id, product, price, quantity, rb, itemCart }) => {
-  let [currentItem, setCurrentItem] = useState({});
-  let [state, dispatch] = useContext(context);
+const Item = ({ id, product, price, rb, itemCart }) => {
+  const [state, dispatch] = useContext(context);
 
+  // Add item to cart
   const addItem = (obj) => {
     dispatch({ type: 'ADD_ITEM', payload: obj })
   }
 
+  // Increase quantity of certain item in cart
   const addMore = (key) => {
-    let quantity = ++state[key].quantity;
+    ++state[key].quantity;
     dispatch({ type: 'UPDATE_ITEM', payload: state[key] })
   }
 
-  useEffect(() => {
-    // console.log(state[itemCart].quantity);
-  }, [state]);
-
   return (
     <div className="flex column item">
-      <img src={`../assets/${itemCart}.jpg`} alt={itemCart} className="img" />
+      <div className="img-cont">
+        <img src={`../assets/${itemCart}.jpg`} alt={itemCart} className="img" />
+      </div>
       <Link to={`/product/${itemCart}`}><h1>{product}</h1></Link>
       <span>{price.toFixed(2)} $</span>
+
       {Object.keys(state).indexOf(itemCart) !== -1 ? (
         <div className="flex w-100 btn-container">
           <button
@@ -39,10 +39,8 @@ const Item = ({ id, product, price, quantity, rb, itemCart }) => {
           Add to cart <i className="fas fa-shopping-cart"></i>
         </button>
       )}
-      {quantity <= 0 ? <p>Out of Stock</p> : ''}
     </div>
   )
 }
-
 
 export default Item;

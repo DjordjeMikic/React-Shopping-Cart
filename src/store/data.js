@@ -1,4 +1,5 @@
-export const products = [
+// Static list of products
+const products = [
   {
     product: "iphone 6s",
     price: 175,
@@ -19,12 +20,16 @@ export const products = [
   }
 ];
 
+// @param ar @type array
+// remove spaces of product name and return all products names in lowercase
 const rename = (ar) => {
   let arr = [...ar];
   let arr4 = arr.map(a => a.toLowerCase()).filter(a => a !== " ");
   return arr4.join('');
 }
-export let productsid = products.map(a => {
+
+// Add unique id to every item in products array and export it
+export const productsid = products.map(a => {
   return {
     ...a,
     id: rename(a.product)

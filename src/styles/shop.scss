@@ -1,3 +1,4 @@
 .itemsContainer {
   @include flex(center, space-between);
+  flex-wrap: wrap;
 }

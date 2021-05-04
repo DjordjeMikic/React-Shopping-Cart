@@ -17,6 +17,10 @@ export function reducer(state, action) {
       return {
         ...state
       }
+    case 'SET_ALL':
+      return action.payload;
+    case 'REMOVE_ALL':
+      return {};
     default:
       throw new Error();
   }
