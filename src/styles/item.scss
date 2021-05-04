@@ -1,0 +1,54 @@
+.item {
+  height: 400px;
+  flex: 0 0 29%;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: $bgColor;
+  color: $color;
+  .img {
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 6px 16px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: $color;
+    margin-top: 6%;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.1,1.1);
+    }
+    &:active {
+      filter: brightness(75%);
+      transform: scale(0.9,0.9);
+    }
+  }
+  a {
+    color: $color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .btn-container {
+    justify-content: space-around !important;
+    position: relative;
+    p {
+      height: 100%;
+      font-size: 1.2rem;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-14%);
+    }
+    button {
+      font-size: 1.1rem;
+      &:hover {
+        transform: scale(0.9,0.9);
+      }
+    }
+  }
+}

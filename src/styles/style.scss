@@ -1,0 +1,30 @@
+@import "variables.scss";
+@import "nav.scss";
+@import "shop.scss";
+@import "item.scss";
+@import "itemView.scss";
+@import "cart/index.scss";
+
+.flex {
+  @include flex(center, center);
+}
+
+.column {
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.relative {
+  position: relative;
+}

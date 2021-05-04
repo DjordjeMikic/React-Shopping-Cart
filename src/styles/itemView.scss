@@ -1,0 +1,44 @@
+.itemView {
+  width: 75%;
+  justify-content: space-around !important;
+  margin-top: 2%;
+  .img-container {
+    height: 400px;
+    width: 400px;
+    border: 1px solid $lightGrey;
+    position: relative;
+    img {
+      height: 400px;
+      width: 400px;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  .info-container {
+    height: 400px;
+    justify-content: space-around !important;
+  }
+  button {
+    font-size: 1.2rem;
+    padding: 6px 11px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: $bgColor;
+    color: $color;
+    transition: all 0.4s;
+    &:hover {
+      background-color: crimson;
+    }
+    &:active {
+      background-color: rgb(144,0,0);
+    }
+    .disabled {
+      background-color: $lightGrey;
+    }
+  }
+}

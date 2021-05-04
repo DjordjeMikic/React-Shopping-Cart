@@ -1,0 +1,9 @@
+$color: #fafafa;
+$grey: #999;
+$lightGrey: #e3e3e3;
+$bgColor: blue;
+@mixin flex($a, $b) {
+  display: flex;
+  align-items: $a;
+  justify-content: $b;
+}
