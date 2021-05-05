@@ -4,7 +4,7 @@ import { productsid } from '../store/data';
 const Shop = () => {
   return (
     <div className="flex column w-100" style={{ height: 'auto' }}>
-      <h1>Items</h1>
+      <h1>Products</h1>
 
       <div className="itemsContainer w-75">
 

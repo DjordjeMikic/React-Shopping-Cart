@@ -3,9 +3,16 @@
   flex: 0 0 29%;
   padding: 16px;
   border-radius: 6px;
-  background-color: $bgColor;
+  box-shadow: 0 0 2px 2px $lightGrey;
   color: $color;
+  background-color: $lightBlue;
   position: relative;
+  transition: 0.4s all;
+
+  &:hover {
+    box-shadow: 0 0 4px 4px $lightGrey;
+    background-color: $hover;
+  }
 
   .img-cont {
     height: 75%;
@@ -29,6 +36,7 @@
     border: none;
     outline: none;
     border-radius: 6px;
+    cursor: pointer;
     background-color: $color;
     margin-top: 6%;
     transition: all 0.4s;

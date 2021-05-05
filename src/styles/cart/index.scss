@@ -18,7 +18,7 @@
     cursor: pointer;
     border-radius: 50%;
     color: $color;
-    background-color: crimson;
+    background-color: $e_color;
   }
 
   h2 {
@@ -65,7 +65,7 @@
 
     &:nth-child(1) {
       border-radius: 4px 0 0 4px;
-      background-color: crimson;
+      background-color: $e_color;
     }
 
     &:nth-child(3) {

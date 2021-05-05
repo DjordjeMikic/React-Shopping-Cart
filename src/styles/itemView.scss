@@ -36,15 +36,15 @@
   background-color: $bgColor;
   color: $color;
   transition: all 0.4s;
-  
+
   &:hover {
-    background-color: crimson;
+    background-color: $e_color;
   }
-  
+
   &:active {
     background-color: rgb(144,0,0);
   }
-  
+
   &__disabled {
     cursor: default;
     background-color: $grey !important;

@@ -4,11 +4,16 @@
   @include flex(center, flex-start);
   padding: 0 44px;
   color: $color;
-  background-color: $bgColor;
+  background-color: $lightBlue;
   position: relative;
 
   a {
     color: $color;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $bgColor;
+    }
   }
 
   .btn {
@@ -37,5 +42,5 @@
     }
   }
 
-  
+
 }
